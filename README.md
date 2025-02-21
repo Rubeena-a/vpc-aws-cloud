@@ -69,8 +69,8 @@ This project involves designing a secure AWS VPC with public and private subnets
     - Replace <private-ip-of-database-server> with the private IP of your database server (private instance).
     - Replace key.pem with the name of your private key file.
       
-    - Run the following command to make the script executable: chmod +x test_connectivity.sh
-    - Execute the script to test connectivity: ./test_connectivity.sh
+    - Run the following command to make the script executable: `chmod +x test_connectivity.sh`
+    - Execute the script to test connectivity: `./test_connectivity.sh`
 
 ## **Tools Used**
 - **AWS Services**: VPC, EC2, IGW, NAT Gateway, Security Groups, NACLs.
