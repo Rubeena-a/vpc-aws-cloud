@@ -65,8 +65,8 @@ This project involves designing a secure AWS VPC with public and private subnets
         - Security Group: Database SG
         
 - Test Connectivity:
-    - Replace <public-ip-of-web-server> with the public IP of your web server (public instance).
-    - Replace <private-ip-of-database-server> with the private IP of your database server (private instance).
+    - Replace `<public-ip-of-web-server>` with the public IP of your web server (public instance).
+    - Replace `<private-ip-of-database-server>` with the private IP of your database server (private instance).
     - Replace key.pem with the name of your private key file.
       
     - Run the following command to make the script executable: `chmod +x test_connectivity.sh`
