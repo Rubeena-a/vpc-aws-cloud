@@ -65,3 +65,19 @@ This project involves designing a secure AWS VPC with public and private subnets
         - Security Group: Database SG
         
 - Test Connectivity:
+    - Replace <public-ip-of-web-server> with the public IP of your web server (public instance).
+    - Replace <private-ip-of-database-server> with the private IP of your database server (private instance).
+    - Replace key.pem with the name of your private key file.
+      
+    - Run the following command to make the script executable: chmod +x test_connectivity.sh
+    - Execute the script to test connectivity: ./test_connectivity.sh
+
+## **Tools Used**
+- **AWS Services**: VPC, EC2, IGW, NAT Gateway, Security Groups, NACLs.
+- **Networking Tools**: Subnetting, CIDR blocks, route tables.
+- **Testing Tools**: SSH, `curl`, `ping`.  
+
+## **Impact**
+- **Enhanced Security**: Implemented least-privilege access using Security Groups and NACLs.
+- **High Availability**: Designed subnets across multiple AZs for fault tolerance.
+- **Scalability**: Built a modular architecture that can scale with business needs.  
