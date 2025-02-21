@@ -21,9 +21,9 @@ This project involves designing a secure AWS VPC with public and private subnets
       - Private-Subnet-B2 (AZ: us-east-1b): 10.0.4.0/24
 
 - NAT GW: Dev-NAT-GW attached to subnet: Public-Subnet-A1 
-- Configure Route Table: 
-        - Public-RT: Subnet Associations: Public-Subnet-A1, Public-Subnet-B1.,
-        - Private_RT: Subnet Associations: Private-Subnet-A2, Private-Subnet-B2  
+- Configure Route Table:
+    - Public-RT: Subnet Associations: Public-Subnet-A1, Public-Subnet-B1.,
+    - Private_RT: Subnet Associations: Private-Subnet-A2, Private-Subnet-B2  
 
 - Configure Security Groups (Least Privilege):
 	- Web Server SG (public instances):
@@ -38,30 +38,30 @@ This project involves designing a secure AWS VPC with public and private subnets
         - MySQL (3306) from Web Server SG
       - Outbound Rules: All traffic allowed.
 
-- NACL:
+- Configure NACL:
   - Public Subnet NACL:
-  - Inbound Rules:
-      - 100: Allow HTTP (80) from 0.0.0.0/0
-      - 110: Allow HTTPS (443) from 0.0.0.0/0
-      - 120: Allow SSH (22) from YourIP/32
-      - *: Deny all
-  - Outbound Rules: Allow all.
+      - Inbound Rules:
+          - 100: Allow HTTP (80) from 0.0.0.0/0
+          - 110: Allow HTTPS (443) from 0.0.0.0/0
+          - 120: Allow SSH (22) from YourIP/32
+          - *: Deny all
+      - Outbound Rules: Allow all.
    - Private Subnet NACL:
-   - Inbound Rules:
-        - 100: Allow ephemeral ports (1024-65535) from Public Subnet CIDR
-        - *: Deny all
-   - Outbound Rules: Allow all.   
+       - Inbound Rules:
+            - 100: Allow ephemeral ports (1024-65535) from Public Subnet CIDR
+            - *: Deny all
+       - Outbound Rules: Allow all.   
     
 - Launch EC2 Instances:
     - Public EC2 (Web Server):
-        AMI: Amazon Linux 2
-        Instance Type: t2.micro
-        Subnet: Public-Subnet-A1
-        Security Group: Web Server SG
+        - AMI: Amazon Linux 2
+        - Instance Type: t2.micro
+        - Subnet: Public-Subnet-A1
+        - Security Group: Web Server SG
     - Private EC2 (Database):
-        AMI: Amazon Linux 2
-        Instance Type: t2.micro
-        Subnet: Private-Subnet-A2
-        Security Group: Database SG
+        - AMI: Amazon Linux 2
+        - Instance Type: t2.micro
+        - Subnet: Private-Subnet-A2
+        - Security Group: Database SG
         
 - Test Connectivity:
