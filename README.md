@@ -81,3 +81,6 @@ This project involves designing a secure AWS VPC with public and private subnets
 - **Enhanced Security**: Implemented least-privilege access using Security Groups and NACLs.
 - **High Availability**: Designed subnets across multiple AZs for fault tolerance.
 - **Scalability**: Built a modular architecture that can scale with business needs.  
+
+## **Author**
+Rubeena Shaik
